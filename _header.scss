@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+$gr: #7AB730;
+$wi: white;
+$bl: black;
+
+@mixin flexpro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin di {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    @include di;
+
+    .box {
+        @include flexpro;
+        // background-color: red;
+        // height: 200px;
+        height: 80px;
+        width: 100%;
+        background-color: $wi;
+        padding-left: 60px;
+        border: 2px solid $gr;
+
+
+        .hed-1 {
+
+            font-size: 40px;
+            align-self: center;
+
+            .fa-house {
+                color: $gr;
+            }
+
+            .pe {
+                font-weight: bold;
+                font-family: "Roboto";
+            }
+        }
+
+        .menu {
+            a {
+                font-size: 19px;
+                text-decoration: none;
+                text-transform: capitalize;
+                font-family: "Roboto";
+                padding-right: 30px;
+                color: $bl;
+            }
+
+            button {
+                height: 80px;
+                width: 200px;
+                font-size: 19px;
+                background-color: $gr;
+                color: $wi;
+                border: none;
+            }
+        }
+
+    }
+
+
+
+
+
+}

@@ -1,0 +1,516 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import "header";
+
+// ////////////////mixin///////////////////////////////////
+@mixin flexpro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin di {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column
+}
+
+@mixin df {
+    display: flex;
+    justify-content: center;
+    // align-items: center;
+}
+
+@mixin mxw {
+    max-width: 1140px;
+    margin: auto;
+    margin-top: 80px;
+}
+
+@mixin br {
+    border-right: 5px solid #7AB730;
+    height: 150px;
+    margin: 0 0 0 40px;
+}
+
+@mixin bl {
+    border-left: 5px solid #7AB730;
+    height: 150px;
+}
+
+@mixin pb {
+    padding: 30px;
+    height: 330px;
+    width: 250px;
+    background-color: #eff3ef;
+}
+
+@mixin tb {
+    height: 330px;
+    width: 250px;
+    background-color: #eff3ef;
+}
+
+// ///////////////////////////////////section-1/////////////////////////////////////////////////////////////
+.sec-1-bg {
+    @include di;
+    background-image: url(/image/hero.jpg);
+    width: 100%;
+    height: 600px;
+    background-size: cover;
+    background-position: center;
+
+    .sec-1-head {
+        :first-child {
+            font-size: 40px;
+            font-weight: 1000;
+            font-family: "Roboto";
+            padding-top: 30px;
+        }
+
+        :nth-child(2) {
+            font-size: 30px;
+            font-family: "Roboto";
+            font-weight: bold;
+            color: $wi;
+            padding-top: 30px;
+        }
+
+        :nth-child(3) {
+            width: 53%;
+            font-size: 25px;
+            font-family: "Roboto";
+            color: $wi;
+            padding-top: 30px;
+        }
+
+        button {
+            height: 60px;
+            width: 187px;
+            font-size: 18px;
+            font-family: "Roboto";
+            background-color: transparent;
+            border: 2px solid white;
+            margin-top: 30px;
+        }
+
+        .fa-play {
+            color: $wi;
+            padding-left: 80px;
+            font-size: 30px;
+        }
+
+        .a {
+            color: $wi;
+            font-size: 30px;
+            padding-left: 40px;
+            font-family: "Roboto";
+        }
+    }
+}
+
+// /////////////////section2/////////////////////////////////////////////////
+.con1 {
+    @include mxw;
+    @include df;
+
+    .about-1 {
+        width: 40%;
+
+        img {
+            width: 450px;
+            height: 500px;
+            background-size: cover;
+            background-position: center;
+        }
+    }
+
+    .border-ri {
+        @include br;
+    }
+
+    .about-2 {
+        width: 60%;
+        @include di;
+        margin-top: -23%;
+        box-sizing: border-box;
+
+        .a-2-1 {
+            font-size: 18px;
+            font-family: "Roboto";
+            color: $gr;
+            margin: 350px 40px 0 0;
+        }
+
+        .a-2-2 {
+            font-size: 50px;
+            font-family: "Roboto";
+            padding: 30px 100px 0 0;
+            font-weight: bold;
+        }
+
+        .a-2-3 {
+            font-size: 20px;
+            width: 630px;
+            font-family: "Roboto";
+            padding: 30px 0 0 0;
+            margin-right: 70px;
+            font-weight: bold;
+            color: #aeafae
+        }
+
+        .box {
+            width: 635px;
+            height: 220px;
+            background-color: #eff0ef;
+            margin-right: 65px;
+            margin-top: 30px;
+
+            p {
+                font-size: 17px;
+                width: 90%;
+                padding-left: 20px;
+                padding-top: 10px;
+            }
+        }
+
+        .p-box {
+            width: 300px;
+            height: 50px;
+            background-color: $gr;
+            text-align: center;
+            padding-top: 15px;
+            font-size: 18px;
+            color: $wi;
+            font-family: "Roboto";
+        }
+
+        p {
+            font-size: 18px;
+            font-family: "Roboto";
+
+
+        }
+    }
+}
+
+// ///////////////////////////////////section:3//////////////////////////////////////////////////////////
+.con-2 {
+    @include mxw;
+
+    .border-ri {
+        @include di;
+        @include bl;
+        margin: 0 0 0 -20px;
+
+    }
+
+    .a-2-1 {
+        font-size: 18px;
+        font-family: "Roboto";
+        color: $gr;
+        margin-top: -13%;
+    }
+
+    .a-2-2 {
+        font-size: 50px;
+        font-family: "Roboto";
+        font-weight: bold;
+        padding-top: 18px;
+    }
+
+    .product-img {
+        @include flexpro;
+        margin-top: 80px;
+
+        .pro-box {
+            @include pb;
+            @include di;
+        }
+
+        .pro-box1 {
+            @include pb;
+            @include di;
+        }
+
+        .pro-box2 {
+            @include pb;
+            @include di;
+        }
+
+        .pro-box3 {
+            @include pb;
+            @include di;
+        }
+
+        img {
+            height: 200px;
+            width: 200px;
+            text-align: center;
+        }
+
+        h6 {
+            font-size: 20px;
+            padding-top: 20px;
+        }
+
+        h5 {
+            font-size: 18px;
+            color: $gr;
+        }
+    }
+}
+
+// ////////////////////////////////////section-4/////////////////////////////////////////////////////////////////
+.bg-img {
+    margin-top: 80px;
+    background-image: url(/image/offer.jpg);
+    height: 500px;
+    width: 100%;
+    background-size: cover;
+    position: relative;
+
+    .offer {
+        @include mxw;
+
+        .border-left {
+            border-left: 5px solid black;
+            height: 150px;
+            box-sizing: border-box;
+            position: absolute;
+            top: 80px;
+            @include di;
+        }
+
+        .offer-con {
+            position: absolute;
+            top: 80px;
+            left: 230px;
+
+            .o-f-c {
+                font-size: 18px;
+                font-family: "Roboto";
+                color: $bl;
+            }
+
+            .o-f-c1 {
+                font-size: 50px;
+                font-family: "Roboto";
+                font-weight: bold;
+                padding-top: 18px;
+                color: $wi;
+            }
+        }
+
+        .o-f-c2 {
+            width: 37%;
+            position: absolute;
+            top: 280px;
+            font-size: 18px;
+            color: $wi;
+        }
+
+        .off-btn {
+            position: absolute;
+            top: 400px;
+
+            .btn {
+                height: 50px;
+                width: 150px;
+                border: none;
+                font-size: 16px;
+                text-transform: uppercase;
+            }
+
+            .btn1 {
+                height: 50px;
+                width: 150px;
+                font-size: 16px;
+                text-transform: uppercase;
+                background-color: transparent;
+                border: 2px solid white;
+                color: $wi;
+                margin-left: 30px;
+            }
+        }
+    }
+}
+
+// ///////////////////////////////////section-5//////////////////////////////////////////////////////////////
+.con-3 {
+    @include mxw;
+
+    .border-ri {
+        @include di;
+        @include bl;
+        margin: 0 0 0 -20px;
+
+    }
+
+    .a-2-1 {
+        font-size: 18px;
+        font-family: "Roboto";
+        color: $gr;
+        margin-top: -13%;
+    }
+
+    .a-2-2 {
+        font-size: 50px;
+        font-family: "Roboto";
+        font-weight: bold;
+        padding-top: 18px;
+    }
+
+    .team-member {
+        @include flexpro;
+        margin-top: 80px;
+
+        .te-box {
+            @include tb;
+            @include di;
+        }
+
+        .te-box1 {
+            @include tb;
+            @include di;
+        }
+
+        .te-box2 {
+            @include tb;
+            @include di;
+        }
+
+        .te-box3 {
+            @include tb;
+            @include di;
+        }
+
+        img {
+            height: 250px;
+            width: 250px;
+            margin-top: -80px;
+        }
+
+        h4 {
+            padding-top: 20px;
+            font-size: 25px;
+            font-family: 'Roboto';
+        }
+
+        h5 {
+            padding-top: 15px;
+            font-size: 16px;
+            font-family: 'Roboto';
+            color: #545554b2;
+        }
+    }
+}
+
+// /////////////////////////////////////footer/////////////////////////////////////////////////////////////
+footer {
+    width: 100%;
+    height: 450px;
+    background-color: #e4e4e4c9;
+    margin-top: 80px;
+    // font-family: 'Roboto';
+
+    .fo-main {
+        @include mxw;
+        padding-top: 80px;
+        @include flexpro;
+
+        .fo-head{
+            @include df;
+            // margin-top: 80px;
+
+            .br {
+                border-left: 5px solid $gr;
+                padding-left: 20px;
+            }
+        }
+
+        .fo-c {
+            margin-top: 30px;
+
+            .f-t {
+                padding-left: 38px;
+            }
+
+            p {
+                font-size: 20px;
+
+            }
+
+            .fo-txtmain {
+                padding-top: 30px;
+                padding-left: 20px;
+            }
+
+            .fo-txt {
+                line-height: 1cm;
+
+                .f1 {
+                    padding: 10px;
+                    color: $gr;
+                }
+            }
+        }
+
+        .fo-c1 {
+            margin-top: 28px;
+
+            p {
+                line-height: 1cm;
+                font-size: 17px;
+                font-family: 'Roboto';
+
+                .fo {
+                    padding: 10px;
+                    color: $gr;
+                }
+            }
+        }
+
+        .fo-form {
+            .form {
+                height: 60px;
+                width: 150px;
+                margin-left: 80px;
+                font-size: 16px;
+                text-align: center;
+                border: 1px solid #b5b6b5;
+            }
+            button{
+                height: 60px;
+                width: 100px;
+                margin-left: -5px;
+                font-size: 16px;
+                box-sizing: border-box;
+                background-color: $gr;
+                border: none;
+                color: $wi;
+                font-weight: bold;
+            }
+
+        }
+        .fo-so{
+            @include df;
+            // align-items: center;
+           .fo-box{
+            height: 40px;
+            width: 40px;
+            border: 1px solid #7AB730;
+            text-align: center;
+            padding: 10px;
+            margin:15px -10px 0px 20px;
+            color: $gr;
+           }
+
+        }
+    }
+}
